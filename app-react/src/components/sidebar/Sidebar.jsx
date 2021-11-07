@@ -1,10 +1,11 @@
+import * as styles from './Sidebar.module.css';
 
 const Sidebar = () => {
     return (
-        <nav className='side-bar'>
-			<div>Friends</div>
-            <div>Groups</div>
-            <div>Pages</div>
+        <nav className={styles.sideBar}>
+			<div className={`${styles.item} ${styles.active}`}>Friends</div>
+            <div className={styles.item}>Groups</div>
+            <div className={styles.item}>Pages</div>
 		</nav>
     )
 }

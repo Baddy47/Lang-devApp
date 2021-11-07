@@ -1,0 +1,7 @@
+.createPostContent {
+    grid-area: createPost;
+
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 5px;
+}
