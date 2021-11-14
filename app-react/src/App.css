@@ -9,3 +9,7 @@
   grid-auto-rows: minmax(1fr, auto);
   grid-gap: 10px;
 }
+
+.appContent {
+  grid-area: main;
+}

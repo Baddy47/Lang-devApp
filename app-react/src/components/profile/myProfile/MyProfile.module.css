@@ -1,6 +1,4 @@
 .profileContent {
-    grid-area: main;
-
     display: grid;
     grid-template-areas: 
     'avatar avatar'

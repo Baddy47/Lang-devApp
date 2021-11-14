@@ -1,0 +1,50 @@
+.messages {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}
+
+.messagesUsers {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.massageSearch {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #afafaf;
+}
+
+input[type=search] {
+    border: 1px solid #f1f0f1;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+.massageUser {
+    border-bottom: 1px solid #afafaf;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.messagesUsers a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-size: 26px;
+}
+
+.messagesUsers a:hover {
+    font-weight: bold;
+}
+
+.messageWindow {
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+}
+
+.messageItem {
+    padding: 10px 0 10px 0;
+}
