@@ -7,13 +7,13 @@ import SomePost from '../somePost/SomePost';
 import * as styles from './MyProfile.module.css';
 import React from "react";
 
-const MyProfile = () => {
+const MyProfile = (props) => {
     return (
         <main className={styles.profileContent}>
             <Description />
             <About />
             <CreatePost />
-            <SomePost />
+            <SomePost state={props.state} />
             <Photos />
             <Events />
         </main>
