@@ -1,18 +1,16 @@
-import React from "react";
-import * as styles from '../learn/Learn.module.css';
+import * as styles from './Learn.module.css';
+import React, {useEffect} from "react";
 
-const Learn = () => {
+const Learn = ({speak, library, wordIndex}) => {
+    useEffect(() => {
+        speak(library[wordIndex].translate);
+    }, [wordIndex, library, speak]);
+
     return (
-        
-        <div>
-            
-            <div className={styles.progressBarContainer}>
-                <div className={styles.progressBar}>
-
-                </div>
-            </div>
-
-        </div>
+        <section className={styles.libraryBlock}>
+            <span>{library[wordIndex].word}</span>
+            <h3>{library[wordIndex].translate}</h3>
+        </section>
     )
 };
 

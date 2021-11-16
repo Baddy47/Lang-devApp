@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from './Dashboard.module.css';
-import buttonPlay from '../../assets/img/btnPlay.svg';
+import buttonPlay from '../../assets/img/btnPlay.svg.svg';
 
 const Dashboard = () => {
     return (
