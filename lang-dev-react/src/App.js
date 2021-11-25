@@ -24,9 +24,7 @@ function App() {
 
     return (
         <BrowserRouter>
-
             <Header/>
-
             <Switch>
                 <Route path='/dashboard'>
                     <Dashboard/>
@@ -54,7 +52,6 @@ function App() {
                     }} className={styles.btnNext}/>
                 </Route>
             </Switch>
-
         </BrowserRouter>
     );
 }

@@ -4,8 +4,8 @@
     'avatar avatar'
     'about createPost'
     'photos somePost'
-    'events somePost';
-    grid-template-rows: repeat(4, 1fr);
+    'events _';
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr;
     grid-auto-rows: minmax(1fr, auto);
     grid-gap: 20px;

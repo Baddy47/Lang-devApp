@@ -3,7 +3,7 @@ import * as styles from './Library.module.css';
 import LibraryBtn from '../../assets/img/Library-btn.svg';
 import DeleteBtn from '../../assets/img/Delete-btn.svg';
 
-const Library = (props) => {
+const Library = ({library, setLibrary}) => {
 
     const inputValue = useRef();
 
@@ -12,15 +12,15 @@ const Library = (props) => {
 
         const response = await fetch(`http://tmp.myitschool.org/API/translate/?source=ru&target=en&word=${inputValue.current.value}`);
         const translation = await response.json();
-        const updateLibrary = [...props.library, {word: translation.word, translate: translation.translate, learn: 0}];
-        props.setLibrary(updateLibrary);
+        const updateLibrary = [...library, {word: translation.word, translate: translation.translate, learn: 0}];
+        setLibrary(updateLibrary);
         localStorage.setItem('library', JSON.stringify(updateLibrary));
         inputValue.current.value = ''
     };
 
     const deleteWord = (id) => {
-        const updateLibrary = props.library.filter((word, index) => index !== id);
-        props.setLibrary(updateLibrary);
+        const updateLibrary = library.filter((word, index) => index !== id);
+        setLibrary(updateLibrary);
         localStorage.setItem('library', JSON.stringify(updateLibrary))
     };
 
@@ -43,7 +43,7 @@ const Library = (props) => {
                     <li><h3>Learn</h3></li>
                 </ul>
 
-                {props.library.map((word, index) => (
+                {library.map((word, index) => (
                     <ul key={index}>
                         <li>{word.word}</li>
                         <li>{word.translate}</li>

@@ -1,5 +1,6 @@
 .createPostContent {
     grid-area: createPost;
+    grid-auto-rows: 50px;
 
     background-color: #fff;
     border-radius: 12px;

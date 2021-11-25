@@ -1,4 +1,5 @@
 import * as styles from './LikeCounts.module.css';
+import React from "react";
 
 const LikeCounts = (props) => {
     return (

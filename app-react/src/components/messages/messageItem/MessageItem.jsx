@@ -1,9 +1,14 @@
 import * as styles from "../Messages.module.css";
+import React from "react";
 
-const MessageItem = (props) => {
+const MessageItem = ({message, addMessage, updateNewMessageText}) => {
+
     return (
-        <div className={styles.messageItem}>
-            {props.message}
+        <div>
+            <div className={styles.messageItem}>
+                <div className={styles.messageItemText}>{message}</div>
+                <img src="https://reqres.in/img/faces/8-image.jpg" alt=""/>
+            </div>
         </div>
     );
 };

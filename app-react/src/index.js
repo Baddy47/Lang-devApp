@@ -1,19 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './redux/State';
-import {BrowserRouter} from "react-router-dom";
+import {rerenderEntireTree} from "./Render";
+import './index.css';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App state={state}/>
-        </BrowserRouter>
-    </React.StrictMode>
-,
-document.getElementById('root')
-);
+rerenderEntireTree(state);
 
 reportWebVitals();

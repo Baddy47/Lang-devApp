@@ -1,3 +1,14 @@
+.messageContent {
+}
+
+.itemText {
+    font-size: 18px;
+    text-align: justify;
+    color: darkgray;
+    margin: 10px;
+    padding: 10px;
+}
+
 .item {
     display: flex;
     align-items: center;
