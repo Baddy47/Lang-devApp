@@ -7,12 +7,12 @@ import Post from '../post/Post';
 import * as styles from './MyProfile.module.css';
 import React from "react";
 
-const MyProfile = ({state, addPost, updateNewPostText}) => {
+const MyProfile = ({state, dispatch}) => {
     return (
         <main className={styles.profileContent}>
             <Description />
             <About />
-            <CreatePost addPost={addPost} state={state} updateNewPostText={updateNewPostText} />
+            <CreatePost state={state} dispatch={dispatch} />
             <Post state={state} />
             <Photos />
             <Events />

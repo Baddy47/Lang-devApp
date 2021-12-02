@@ -10,7 +10,7 @@ import Music from "./components/music/Music";
 import Settings from "./components/settings/Settings";
 import React from "react";
 
-function App({state, addPost, addMessage, updateNewPostText, updateNewMessageText}) {
+function App({state, dispatch}) {
 	return (
 			<div className="App">
 				<Header />
@@ -18,8 +18,8 @@ function App({state, addPost, addMessage, updateNewPostText, updateNewMessageTex
 				<Sidebar />
 				<div className='appContent'>
 					<Routes>
-						<Route path='/profile/*' element={<Profile state={state.profilePage} addPost={addPost} updateNewPostText={updateNewPostText}  />} />
-						<Route path='/messages/*' element={<Messages state={state.messagePage} addMessage={addMessage} updateNewMessageText={updateNewMessageText} />} />
+						<Route path='/profile/*' element={<Profile state={state} dispatch={dispatch} />} />
+						<Route path='/messages/*' element={<Messages state={state} dispatch={dispatch} />} />
 						<Route path='/news/*' element={<News />} />
 						<Route path='/music/*' element={<Music />} />
 						<Route path='/settings/*' element={<Settings />} />

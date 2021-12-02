@@ -47,7 +47,7 @@ input[type=search] {
     padding: 10px 20px 10px 20px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr;
+    grid-template-rows: 2fr;
 }
 
 .messageItemText {
@@ -73,6 +73,12 @@ input[type=search] {
     width: 70px;
 }
 
+.textArea {
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+}
+
 textarea {
     outline: none;
     border: 1px solid #afafaf;
@@ -80,7 +86,6 @@ textarea {
     padding: 10px;
     margin: 10px;
     width: 300px;
-    justify-self: end;
 }
 
 button {
@@ -94,6 +99,5 @@ button {
     margin-right: 15px;
     background-color: #34A853;
     width: 100px;
-    justify-self: end;
-
+    align-self: flex-end;
 }

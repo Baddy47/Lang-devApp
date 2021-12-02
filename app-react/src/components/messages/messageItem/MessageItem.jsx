@@ -1,7 +1,7 @@
 import * as styles from "../Messages.module.css";
 import React from "react";
 
-const MessageItem = ({message, addMessage, updateNewMessageText}) => {
+const MessageItem = ({message}) => {
 
     return (
         <div>

@@ -4,7 +4,7 @@ import * as styles from "./Post.module.css";
 
 const Post = ({state}) => {
 
-    let postMessageElements = state.postData.map( elem =>
+    let postMessageElements = state.profilePage.postData.map( elem =>
         (<PostMessage message={elem.message} name={elem.name} likeCounts={elem.likeCounts} />));
 
     return (

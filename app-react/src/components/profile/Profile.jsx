@@ -1,9 +1,9 @@
 import MyProfile from "../profile/myProfile/MyProfile";
 import React from "react";
 
-const Profile = ({state, addPost, updateNewPostText}) => {
+const Profile = ({state, dispatch}) => {
     return (
-       <MyProfile state={state} addPost={addPost} updateNewPostText={updateNewPostText} />
+       <MyProfile state={state} dispatch={dispatch} />
     )
 };
 

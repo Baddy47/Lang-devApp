@@ -1,17 +1,17 @@
 import * as styles from './CreatePost.module.css';
 import React from "react";
+import {addPostAction, updateNewPostTextAction} from "../../../redux/profileReducer";
 
-const CreatePost = ({addPost, state, updateNewPostText}) => {
+const CreatePost = ({state, dispatch}) => {
+    let newTextData = state.profilePage.newTextData;
 
-    let messageTextElement = React.createRef();
     const addPosts = () => {
-        addPost();
-        updateNewPostText('');
+        dispatch(addPostAction());
+        dispatch(updateNewPostTextAction(''));
     };
-
-    const onChangePost = () => {
-        let text = messageTextElement.current.value;
-        updateNewPostText(text);
+    const onChangePost = (event) => {
+        let text = event.target.value;
+        dispatch(updateNewPostTextAction(text));
     };
 
     return (
@@ -19,7 +19,9 @@ const CreatePost = ({addPost, state, updateNewPostText}) => {
             <h3>Create Posts</h3>
 
             <div className={styles.createPostArea}>
-                <textarea onChange={onChangePost} ref={messageTextElement} value={state.newTextData} placeholder='Create some post.'/>
+                <textarea onChange={onChangePost}
+                          value={newTextData}
+                          placeholder='Create some post.'/>
             </div>
 
             <div className={styles.createPostButton}>
